@@ -5,7 +5,7 @@
     --blanco: #fff;
     --detalle: #FF931E;
     --bg1: #448CBF;
-    --bg2: rgba(248, 4, 25, 0.2);
+    --bg2: #2D5E80;
 
 }
 *{
@@ -17,6 +17,7 @@
 body{
     min-height: 100vh;
     font-size: 62.5%;
+    transition: all 0.5s;
 }
 h1, h2, h3, h4, h5, h6, p{
     color: var(--text2);
@@ -30,6 +31,84 @@ h1, h2, h3, h4, h5, h6, p{
     background-color: var(--bg2);
     border-radius: 50%;
 } */
+
+
+/******************/
+/*    DARK MODE   */
+/******************/
+body.dark{
+    background-color: var(--text2);
+    color: var(--claro);
+    transition: all 0.5s;
+}
+body.dark h1,body.dark h2,body.dark h3,body.dark h4,body.dark a,body.dark p{
+    color: var(--claro);
+}
+
+
+/**********************/
+/*    theme changer   */
+/**********************/
+.theme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    padding: 3px;
+    background-color: var(--claro);
+    border-radius: 50px;
+    margin-inline: 5px;
+    font-size: 18px;
+    color: var(--text1);
+}
+.buttonWrapper{
+    position: relative;
+    padding: 0;
+    width: 50px;
+    height: 25px;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 50px;
+    background-color: var(--claro);
+    cursor: pointer;
+}
+.button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 50px;
+    border: 2px solid rgba(0,0,0,0.2);
+    transition: 0.2s;
+}
+.button.dark{
+    transform: translateX(24px);
+}
+
+
+/**************************/
+/*     TOGGLE ESTILOS     */
+/**************************/
+button{
+    background-color: var(--bg2);
+    color: var(--blanco);
+    padding: 20px;
+    border-radius: 50px;
+    margin: 0;
+    border: none;
+    transition: 0.3s;
+    font-size: 20px;
+    font-weight: 700;
+}
+button:hover{
+    background-color: var(--detalle);
+}
+.estilo1{
+    display: none;
+}
+
 /**************************/
 /*    Estilos generales   */
 /**************************/
@@ -53,7 +132,12 @@ a, a:visited{text-decoration: none;}
     -webkit-backdrop-filter: blur( 8px );
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
-
+#Botones{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
 /*****************/
 /*    Estilo 1   */
 /*****************/
@@ -240,43 +324,3 @@ a, a:visited{text-decoration: none;}
 
 
 
-/**********************/
-/*    theme changer   */
-/**********************/
-.theme{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.icon{
-    padding: 3px;
-    background-color: var(--claro);
-    border-radius: 50px;
-    margin-inline: 5px;
-    font-size: 18px;
-    color: var(--text1);
-}
-.buttonWrapper{
-    position: relative;
-    padding: 0;
-    width: 50px;
-    height: 25px;
-    border: 1px solid rgba(0,0,0,0.5);
-    border-radius: 50px;
-    background-color: var(--claro);
-    cursor: pointer;
-}
-.button{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 24px;
-    height: 24px;
-    background-color: rgba(0,0,0,0.7);
-    border-radius: 50px;
-    border: 2px solid rgba(0,0,0,0.2);
-    transition: 0.2s;
-}
-.button.dark{
-    transform: translateX(24px);
-}
