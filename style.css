@@ -21,7 +21,7 @@ body{
 h1, h2, h3, h4, h5, h6, p{
     color: var(--text2);
 }
-/* .fondo{
+.fondo{
     position: absolute;
     top: -500px;
     right: -400px;
@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6, p{
     height: 1000px;
     background-color: var(--bg2);
     border-radius: 50%;
-} */
+}
 
 
 /******************/
@@ -91,8 +91,7 @@ body.dark h1,body.dark h2,body.dark h3,body.dark h4,body.dark a,body.dark p{
 /*     TOGGLE ESTILOS     */
 /**************************/
 button{
-    /* background-color: var(--bg2); */
-    background-color: hsl( var(--detalle) / .9 );
+    background-color: hsl(var(--detalle));
     color: hsl(var(--blanco));
     padding: 20px;
     border-radius: 50px;
